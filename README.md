@@ -53,3 +53,4 @@ root                    (project root folder)
 ## Authors
 ---
 * Jordan Waite @ jman1819@byui.edu
+* Zack Doxey @ zack13@byui.edu
