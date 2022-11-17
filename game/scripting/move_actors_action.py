@@ -8,6 +8,8 @@ class MoveActorsAction(Action):
     The responsibility of MoveActorsAction is to move all the actors that have a velocity greater
     than zero.
     """
+    def __init__(self):
+        super().__init__()
 
     def execute(self, cast, script):
         """Executes the move actors action.
