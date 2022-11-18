@@ -39,14 +39,13 @@ class HandleCollisionsAction(Action):
         scores = cast.get_actors("scores")
         score1 = scores[0]
         score2 = scores[1]
-        food = cast.get_first_actor("foods")
+        # food = cast.get_first_actor("foods")
         cycles = cast.get_actors("cycle")
-        # for cycle in cycles:
-        #     if cycles[0].get_head().get_position().equals(food.get_position()):
-        #         points = food.get_points()
-        #         cycle.grow_tail(points)
-        #         score1.add_points(points)
-        #         food.reset()
+        for cycle in cycles:
+            points = 1
+            cycle.grow_tail(points)
+            score1.add_points(points)
+            score2.add_points(points)
 
     
     def _handle_segment_collision(self, cast):
