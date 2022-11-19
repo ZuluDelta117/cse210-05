@@ -2,6 +2,7 @@ import constants
 from game.casting.actor import Actor
 from game.scripting.action import Action
 from game.shared.point import Point
+from game.services.stopwatch_services import Stopwatch_services
 
 class HandleCollisionsAction(Action):
     """
@@ -39,11 +40,13 @@ class HandleCollisionsAction(Action):
         scores = cast.get_actors("scores")
         score1 = scores[0]
         score2 = scores[1]
+        
         # food = cast.get_first_actor("foods")
         cycles = cast.get_actors("cycle")
         for cycle in cycles:
-            points = 1
-            cycle.grow_tail(points)
+            points = 0
+            length = 1
+            cycle.grow_tail(length)
             score1.add_points(points)
             score2.add_points(points)
 

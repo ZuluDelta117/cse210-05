@@ -1,5 +1,4 @@
 import time
-current = 0
 
 class Stopwatch_services():
     """
@@ -16,18 +15,10 @@ class Stopwatch_services():
         Args:
         None
         """
-        seconds = current
+        seconds = self.current
         time.sleep(1)
         seconds =+ 1
         return seconds
 
-start_time = Stopwatch_services()
-start_time
-# Starts the timer, this needs to be placed within the main program
-class management():
-    def time_management(current):
-        check_time = start_time
-        while True:
-            current += check_time.add_second
-            return current
-        # This adds a second to the timer.
+
+        
